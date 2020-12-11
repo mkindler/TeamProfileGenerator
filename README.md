@@ -41,7 +41,7 @@ GIF demonstrating the application passing all tests.
 <br />
 GIF demonstrating the application's function.
 <br />
-![Demo of Application Using Node.js](assets/team-profile-generator-demo-gif)
+![Demo of Application Using Node.js](assets/team-profile-generator-demo.gif)
 
 ## Contributing
 
