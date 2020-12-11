@@ -225,10 +225,15 @@ function teamMenu() {
                     return "Please enter at least one character to proceed.";
                   },
               },
-          }
-      ])
+            ]).then(answers => {
+                const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
+                teamMembers.push(intern);
+                idArray.push(answers.internId);
+                createTeam();
+            });
+          }     
   }
-}
+
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
