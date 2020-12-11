@@ -231,8 +231,19 @@ function teamMenu() {
                 idArray.push(answers.internId);
                 createTeam();
             });
-          }     
+          }
+          
+          function buildTeam() {
+              if (!fs.existsSync(OUTPUT_DIR)) {
+                  fs.mkdirSync(OUTPUT_DIR)
+              }
+              fs.writeFileSync(outputPath, render(teamMembers), "utf-8");
+          }
+
+          createManager();
   }
+
+  teamMenu();
 
 
 // Write code to use inquirer to gather information about the development team members,
